@@ -1131,3 +1131,63 @@ Processing by RoomsController#index as HTML
 Completed 200 OK in 8ms (Views: 4.8ms | ActiveRecord: 0.2ms | Allocations: 5228)
 
 
+Started GET "/" for 127.0.0.1 at 2022-08-29 15:07:55 +0400
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 3.4ms | Allocations: 948)
+  Rendered layouts/_navbar.html.erb (Duration: 0.6ms | Allocations: 204)
+  Rendered layout layouts/application.html.erb (Duration: 43.8ms | Allocations: 35912)
+Completed 200 OK in 51ms (Views: 46.1ms | ActiveRecord: 0.0ms | Allocations: 41262)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2022-08-29 15:07:58 +0400
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering /home/unisens/.rvm/gems/ruby-3.0.0/gems/devise-4.8.1/app/views/devise/sessions/new.html.erb within layouts/application
+  Rendered /home/unisens/.rvm/gems/ruby-3.0.0/gems/devise-4.8.1/app/views/devise/shared/_links.html.erb (Duration: 1.1ms | Allocations: 846)
+  Rendered /home/unisens/.rvm/gems/ruby-3.0.0/gems/devise-4.8.1/app/views/devise/sessions/new.html.erb within layouts/application (Duration: 8.2ms | Allocations: 6721)
+  Rendered layouts/_navbar.html.erb (Duration: 0.1ms | Allocations: 59)
+  Rendered layout layouts/application.html.erb (Duration: 10.3ms | Allocations: 9080)
+Completed 200 OK in 20ms (Views: 12.1ms | ActiveRecord: 0.4ms | Allocations: 17152)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2022-08-29 15:08:04 +0400
+Processing by Devise::SessionsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"mesxiana3@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "mesxiana3@gmail.com"], ["LIMIT", 1]]
+Redirected to http://127.0.0.1:3000/
+Completed 302 Found in 287ms (ActiveRecord: 0.4ms | Allocations: 6523)
+
+
+Started GET "/" for 127.0.0.1 at 2022-08-29 15:08:04 +0400
+Processing by PagesController#home as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/pages/home.html.erb:3
+  Rendered pages/home.html.erb within layouts/application (Duration: 2.2ms | Allocations: 1272)
+  Rendered layouts/_navbar.html.erb (Duration: 0.1ms | Allocations: 49)
+  Rendered layout layouts/application.html.erb (Duration: 4.7ms | Allocations: 3621)
+Completed 200 OK in 6ms (Views: 5.0ms | ActiveRecord: 0.2ms | Allocations: 3997)
+
+
+Started GET "/rooms" for 127.0.0.1 at 2022-08-29 15:08:05 +0400
+Processing by RoomsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering rooms/index.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" != ?[0m  [["id", 1]]
+  ↳ app/views/rooms/index.html.erb:4
+  Rendered collection of templates [0 times] (Duration: 0.0ms | Allocations: 23)
+  [1m[36mRoom Load (0.1ms)[0m  [1m[34mSELECT "rooms".* FROM "rooms" WHERE "rooms"."is_private" = ?[0m  [["is_private", 0]]
+  ↳ app/views/rooms/index.html.erb:6
+  Rendered collection of templates [0 times] (Duration: 0.0ms | Allocations: 13)
+  Rendered rooms/index.html.erb within layouts/application (Duration: 2.2ms | Allocations: 1589)
+  Rendered layouts/_navbar.html.erb (Duration: 0.2ms | Allocations: 80)
+  Rendered layout layouts/application.html.erb (Duration: 4.6ms | Allocations: 4011)
+Completed 200 OK in 10ms (Views: 5.4ms | ActiveRecord: 0.5ms | Allocations: 7218)
+
+
