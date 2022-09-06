@@ -11,7 +11,9 @@ Rails.application.routes.draw do
   get '/users/show/:id', to: "users#show", as: :user
   
 
-
+  devise_scope :user do
+    get 'users', to: 'devise/registrations#new'
+  end
 
  
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
