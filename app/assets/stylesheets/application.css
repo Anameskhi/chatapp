@@ -102,3 +102,17 @@ body {
   right: 10px;
   position: absolute;
 }
+.style-nav{
+  font-family: 'Lobster', cursive;
+  color: #8ea1a1;
+}
+.main-text{
+  width: 70%;
+  margin: auto;
+  text-align: center;
+  font-family: 'Lobster', cursive;
+}
+.text-center{
+  text-align: center;
+}
+

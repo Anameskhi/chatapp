@@ -48,12 +48,12 @@ consumer.subscriptions.create("AppearanceChannel", {
     console.log("Install");
     window.removeEventListener("load", resetFunc);
     window.removeEventListener("DOMContentLoaded", resetFunc);
-    window.removeEventListener("click", resetFunc);
+    window.removeEventListener("mousemove", resetFunc);
     window.removeEventListener("keydown", resetFunc);
 
     window.addEventListener("load", resetFunc);
     window.addEventListener("DOMContentLoaded", resetFunc);
-    window.addEventListener("click", resetFunc);
+    window.addEventListener("mousemove", resetFunc);
     window.addEventListener("keydown", resetFunc);
     this.resetTimer();
   },
@@ -64,8 +64,8 @@ consumer.subscriptions.create("AppearanceChannel", {
     if (!!shouldRun) {
       this.online();
       clearTimeout(timer);
-      const timeInSeconds = 20;
-      const milliseconds = 5000;
+      const timeInSeconds = 5;
+      const milliseconds = 1000;
       const timeInMilliseconds = timeInSeconds * milliseconds;
 
       timer = setTimeout(this.away.bind(this), timeInMilliseconds);
