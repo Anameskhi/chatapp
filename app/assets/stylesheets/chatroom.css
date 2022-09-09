@@ -15,9 +15,8 @@
 #attachment-previews {
   position: absolute;
   display: inline;
-  bottom: 120px;
+  bottom: 50px;
   height: 70px;
-  width: 290px;
   overflow-y: hidden;
   overflow-x: auto;
   direction: rtl;
@@ -28,7 +27,7 @@
   display: inline-block;
   width: 50px;
   height: 50px;
-  margin-right: 10px;
+  margin-right: 20px;
   max-height: 50px;
   background-size: contain;
   font-size: 50px;
@@ -86,4 +85,7 @@
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
   background: #555;
+}
+#rooms{
+  padding-left: 0px;
 }
