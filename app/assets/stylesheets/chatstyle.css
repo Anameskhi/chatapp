@@ -1,0 +1,22 @@
+a.contact {
+  display: block;
+  color: white;
+  line-height: 3.2;
+  text-decoration: none;
+  width: 100%;
+}
+li.list-group-item
+{
+  padding-left:5px;
+  margin-bottom:4px;
+}
+li.list-group-item:hover 
+{
+  background-color: #141a20!important;
+}
+
+li.list-group-item:hover a
+{
+  color:white;
+
+}
