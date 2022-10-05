@@ -38,11 +38,32 @@ display: flex;
 
 
   <%if notice  %>
-     <p class= "notice"><%= notice%></p>
+     <p class = "alert alert-success"><%= notice%></p>
   <%elsif alert %>
-     <p class= "alert"><%= alert%></p>
+     <p class= "alert alert-danger"><%= alert%></p>
   <%end%>
   <%= render "layouts/navbar"%>
     <%= yield %>
+
+
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+
+<script type="text/javascript">
+
+$(document).ready(function () {
+ 
+window.setTimeout(function() {
+    $(".alert").fadeTo(1000, 0).slideUp(1000, function(){
+        $(this).remove(); 
+    });
+}, 2000);
+ 
+});
+
+
+</script>
   </body>
 </html>
