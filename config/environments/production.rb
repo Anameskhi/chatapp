@@ -1,4 +1,5 @@
 require "active_support/core_ext/integer/time"
+Rails.application.config.action_controller.default_url_options = { host: 'https://new-chat-app-rails.herokuapp.com', port: 80 }
 
 Rails.application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
